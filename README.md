@@ -22,7 +22,7 @@ Atseden-zerbitzuak egitura berezia du. Zerbitzu honen bidez erabiltzaileak eskae
 
 # MongoDB
 
-SpringBoot aplikazio honek MongoDB datu-base baten eskaera sortzen du. Datu-basea sortzea nekezagoa da MongoDBren eta MongoDB Compassen edizio komunitarioa instalatzeko. Behin instalatuta, bezeroa ireki eta gure makinarekin konexioa sortzen dugu. Hemen urruneko konexioak sor ditzakezu zerbitzariekin, tokiko makinarekin eta baita MongoDB edo Hodeiarekin ere.
+SpringBoot aplikazio honek MongoDB datu-base baten eskaera sortzen du. Datu-basea sortzea nekezagoa da MongoDBren eta MongoDB Compassen edizio komunitarioa instalatzeko. Behin instalatuta, bezeroa ireki eta gure makinarekin konexioa sortzen dugu. Hemen urruneko konexioak sor ditzakezu zerbitzariekin, tokiko makinarekin eta baita MongoDB edo Cloudarekin ere.
 
 Konexio-kate hori editatzeak eta doitzeak aukera emango dizu behar duzun lekuan konektatu ahal izateko. Kasu honetan, aplikazioa tokiko makinara konektatzeko konfiguratuta dago Localhost-en bidez. Mongodb:// localhost sartu eta datu-basea sortu dezakezu.
 
