@@ -1,4 +1,4 @@
-# proiektu-pertsonala
+# Proiektu-pertsonala Julen Galindo
  datu atzipeneko proiektua
 
 Proiektu honen eginkizun nagusia Gainerako Api bat garatzea da, MongoDB datu-base batera sartzeko eta Rest Api bat web-aplikazio batean nola sar daitekeen ikasteko.
@@ -10,17 +10,17 @@ Hauek dira kontuan hartu beharreko erabilera orokorreko urratsak:
     - Collection name: Players
     - Maven execution command (same directory as pom.xml): mvn spring-boot:run
 
-#Dataset
+# Dataset
 
 Dataset honek hainbat motako atributoak zituen, baina programam baten ondorioz, atributo guztiak aldatzen ditu eta sartzen ditu ArrayLiat batean String motakoa. Ideia nagusia zen gure datubaseetan nolabaiteko sakontasunaz arduratzea, datu lauak biltzea saihestuz. Proiekturako aukeratutako dataseta Kagglen dagoen datu-multzo batetik aukeratu zen.
 
-#Rest Serbitzua
+# Rest Serbitzua
 Atseden-zerbitzuak egitura berezia du. Zerbitzu honen bidez erabiltzaileak eskaera mota desberdinak egin ditzake, mota horiek CRUD aplikazio batek egiten dituen berberak dira; sortu (POST), irakurri (GET), eguneratu (PUT) eta ezabatu (DELETE). Amaiera-puntu bakoitzak eskaera mota bat kudeatzen du, eta horrek esan nahi du, zein kasutan exekutatuko den, zerbitzuak eragiketa mota bat edo beste bat egingo duela. Eskaera egin ahal izateko, erabiltzaile-interfazea edo beste garapen-ingurune bat erabil daiteke, hala nola Imsomnia, Postman eta abar. Solger-etik azken puntuetara joan, modeloak ikusi eta api doc, yaml formatuan. Hola geldituko litzateke.
 ![image](https://github.com/julengalin/proiektu-pertsonala/assets/114486026/aad586b1-112f-4cbe-88a0-29700793c3e1)
 
 ![image](https://github.com/julengalin/proiektu-pertsonala/assets/114486026/24cb259d-de56-4909-bdbf-c6d417141aed)
 
-#MongoDB
+# MongoDB
 
 SpringBoot aplikazio honek MongoDB datu-base baten eskaera sortzen du. Datu-basea sortzea nekezagoa da MongoDBren eta MongoDB Compassen edizio komunitarioa instalatzeko. Behin instalatuta, bezeroa ireki eta gure makinarekin konexioa sortzen dugu. Hemen urruneko konexioak sor ditzakezu zerbitzariekin, tokiko makinarekin eta baita MongoDB edo Hodeiarekin ere.
 
@@ -37,7 +37,7 @@ Ezkerraldean datu-baseak ikus daitezke, eta hor datu-basea eta datuak gordeko di
      - @param stops Jokalariak zenbat aldiz ondo defendatu duen kantitatea String formatuan
      - @param pts Jokalariaren puntuak String formatuan
 
-#Javako proiektua
+# Javako proiektua
 
 Java proiektua garatu da SpringBoot proiektu bat sortuz. Maven motako proiektu bat ere erabiltzen ari gara, dependentzia erosoak gehitu eta gure proiektuan sar ditzakegulako.
 
