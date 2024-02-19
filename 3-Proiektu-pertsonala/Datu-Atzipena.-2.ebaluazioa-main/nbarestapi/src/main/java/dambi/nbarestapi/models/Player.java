@@ -13,18 +13,31 @@ public class Player {
     private String playerName;
     private String team;
     private String conference;
-    private String gamesPlayed;
-    private String minutesPerGame;
-    private String dunksMade;
-    private String stops;
-    private String pts;
+    private int gamesPlayed;
+    private double minutesPerGame;
+    private double dunksMade;
+    private double stops;
+    private double pts;
+    private double oreb;
+    private double dreb;
+    private double ast;
+    private double stl;
+    private double blk;
 
-    public Player() {
-
+    @Override
+    public String toString() {
+        return "Player [playerName=" + playerName + ", team=" + team + ", conference=" + conference + ", gamesPlayed="
+                + gamesPlayed + ", minutesPerGame=" + minutesPerGame + ", dunksMade=" + dunksMade + ", stops=" + stops
+                + ", pts=" + pts + ", oreb=" + oreb + ", dreb=" + dreb + ", ast=" + ast + ", stl=" + stl + ", blk="
+                + blk + "]";
     }
 
-    public Player(String playerName, String team, String conference, String gamesPlayed, String minutesPerGame,
-            String dunksMade, String stops, String pts) {
+    public String getPlayerName() {
+        return playerName;
+    }
+
+    public Player(String playerName, String team, String conference, int gamesPlayed, double minutesPerGame,
+            double dunksMade, double stops, double pts, double oreb, double dreb, double ast, double stl, double blk) {
         this.playerName = playerName;
         this.team = team;
         this.conference = conference;
@@ -33,10 +46,11 @@ public class Player {
         this.dunksMade = dunksMade;
         this.stops = stops;
         this.pts = pts;
-    }
-
-    public String getPlayerName() {
-        return playerName;
+        this.oreb = oreb;
+        this.dreb = dreb;
+        this.ast = ast;
+        this.stl = stl;
+        this.blk = blk;
     }
 
     public void setPlayerName(String playerName) {
@@ -59,51 +73,88 @@ public class Player {
         this.conference = conference;
     }
 
-    public String getGamesPlayed() {
+    public int getGamesPlayed() {
         return gamesPlayed;
     }
 
-    public void setGamesPlayed(String gamesPlayed) {
+    public void setGamesPlayed(int gamesPlayed) {
         this.gamesPlayed = gamesPlayed;
     }
 
-    public String getMinutesPerGame() {
+    public double getMinutesPerGame() {
         return minutesPerGame;
     }
 
-    public void setMinutesPerGame(String minutesPerGame) {
+    public void setMinutesPerGame(double minutesPerGame) {
         this.minutesPerGame = minutesPerGame;
     }
 
-    public String getDunksMade() {
+    public double getDunksMade() {
         return dunksMade;
     }
 
-    public void setDunksMade(String dunksMade) {
+    public void setDunksMade(double dunksMade) {
         this.dunksMade = dunksMade;
     }
 
-    public String getStops() {
+    public double getStops() {
         return stops;
     }
 
-    public void setStops(String stops) {
+    public void setStops(double stops) {
         this.stops = stops;
     }
 
-    public String getPts() {
+    public double getPts() {
         return pts;
     }
 
-    public void setPts(String pts) {
+    public void setPts(double pts) {
         this.pts = pts;
     }
 
-    @Override
-    public String toString() {
-        return "Player [playerName=" + playerName + ", team=" + team + ", conference=" + conference + ", gamesPlayed="
-                + gamesPlayed + ", minutesPerGame=" + minutesPerGame + ", dunksMade=" + dunksMade + ", stops=" + stops
-                + ", pts=" + pts + "]";
+    public double getOreb() {
+        return oreb;
     }
 
+    public void setOreb(double oreb) {
+        this.oreb = oreb;
+    }
+
+    public double getDreb() {
+        return dreb;
+    }
+
+    public void setDreb(double dreb) {
+        this.dreb = dreb;
+    }
+
+    public double getAst() {
+        return ast;
+    }
+
+    public void setAst(double ast) {
+        this.ast = ast;
+    }
+
+    public double getStl() {
+        return stl;
+    }
+
+    public void setStl(double stl) {
+        this.stl = stl;
+    }
+
+    public double getBlk() {
+        return blk;
+    }
+
+    public void setBlk(double blk) {
+        this.blk = blk;
+    }
+
+    public Player() {
+
+    }
 }
+    

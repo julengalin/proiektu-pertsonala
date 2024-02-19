@@ -83,8 +83,8 @@ public class MainController {
      * @return String The player has been added mezu bat String formatuan
      */
     @PostMapping(value = "/addplayer")
-    public @ResponseBody String addPlayer(@RequestParam String playerName, @RequestParam String team, @RequestParam String conference, @RequestParam String gamesPlayed, 
-    @RequestParam String minutesPerGame, @RequestParam String dunksMade, @RequestParam String stops, @RequestParam String pts) {
+    public @ResponseBody String addPlayer(@RequestParam String playerName, @RequestParam String team, @RequestParam String conference, @RequestParam int gamesPlayed, 
+    @RequestParam double minutesPerGame, @RequestParam double dunksMade, @RequestParam double stops, @RequestParam double pts) {
 
         Player p = new Player();
         p.setPlayerName(playerName);
@@ -143,8 +143,8 @@ public class MainController {
      * @return ResponseEntity<Player> 
      */
     @PutMapping(value = "/updateplayer/{player_name}")
-    public ResponseEntity<Player> updatePlayer(@PathVariable String playerName, @RequestParam String team, @RequestParam String conference, @RequestParam String gamesPlayed, 
-    @RequestParam String minutesPerGame, @RequestParam String dunksMade, @RequestParam String stops, @RequestParam String pts) {
+    public ResponseEntity<Player> updatePlayer(@PathVariable String playerName, @RequestParam String team, @RequestParam String conference, @RequestParam int gamesPlayed, 
+    @RequestParam double minutesPerGame, @RequestParam double dunksMade, @RequestParam double stops, @RequestParam double pts) {
         
         try {
 
