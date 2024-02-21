@@ -19,7 +19,7 @@ public class MongoToCSVExporter {
             MongoDatabase database = mongoClient.getDatabase("NBA");
             MongoCollection<Document> collection = database.getCollection("Players");
             Path csvFilePath = Paths.get(
-                "C:\\Users\\Julen\\OneDrive\\Escritorio\\proiektu-pertsonala\\3-Proiektu-pertsonala\\Datu-Atzipena.-2.ebaluazioa-main\\data\\CollegeBasketballPlayers2009-2021.csv");
+                "C:\\Users\\Julen\\OneDrive\\Escritorio\\proiektu-pertsonala\\3-Proiektu-pertsonala\\Datu-Atzipena.-2.ebaluazioa-main\\data\\csv\\mongoToCSV.csv");
                 try (CSVWriter csvWriter = new CSVWriter(new FileWriter(csvFilePath.toFile()))) {
                 FindIterable<Document> documents = collection.find();
                 Document firstDocument = documents.first();

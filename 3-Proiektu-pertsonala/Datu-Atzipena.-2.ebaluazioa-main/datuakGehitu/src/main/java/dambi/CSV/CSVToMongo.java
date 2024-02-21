@@ -19,11 +19,11 @@ El programa utiliza try-with-resources para gestionar la conexión y garantizar 
 public class CSVToMongo {
     public static void main(String[] args) {
         try (MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017")) {
-            MongoDatabase database = mongoClient.getDatabase("NBA");
+            MongoDatabase database = mongoClient.getDatabase("NBAS");
             MongoCollection<Document> collection = database.getCollection("Players");
 
             Path csvFilePath = Paths.get(
-                    "C:\\Users\\Julen\\OneDrive\\Escritorio\\proiektu-pertsonala\\3-Proiektu-pertsonala\\Datu-Atzipena.-2.ebaluazioa-main\\data\\CollegeBasketballPlayers2009-2021.csv");
+                    "C:\\Users\\Julen\\OneDrive\\Escritorio\\proiektu-pertsonala\\3-Proiektu-pertsonala\\Datu-Atzipena.-2.ebaluazioa-main\\data\\csv\\mongoToCSV.csv");
 
             try (CSVReader csvReader = new CSVReader(new FileReader(csvFilePath.toFile()))) {
                 List<String[]> records = csvReader.readAll();

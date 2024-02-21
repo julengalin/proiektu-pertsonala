@@ -23,7 +23,7 @@ public class XMLToMongo {
             MongoDatabase database = mongoClient.getDatabase("NBA");
             MongoCollection<Document> collection = database.getCollection("Players");
 
-            Path xmlFilePath = Paths.get("C:\\Users\\Julen\\OneDrive\\Escritorio\\proiektu-pertsonala\\3-Proiektu-pertsonala\\Datu-Atzipena.-2.ebaluazioa-main\\data\\CollegeBasketballPlayers2009-2021.csv");
+            Path xmlFilePath = Paths.get("C:\\Users\\Julen\\OneDrive\\Escritorio\\proiektu-pertsonala\\3-Proiektu-pertsonala\\Datu-Atzipena.-2.ebaluazioa-main\\data\\xml\\CollegeBasketballPlayers2009-2021.xml");
 
             List<Document> documents = parseXML(xmlFilePath);
             collection.insertMany(documents);

@@ -17,11 +17,11 @@ import org.bson.Document;
 public class JSONToMongo {
     public static void main(String[] args) {
         try (MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017")) {
-            MongoDatabase database = mongoClient.getDatabase("NBA");
+            MongoDatabase database = mongoClient.getDatabase("NBAS");
             MongoCollection<Document> collection = database.getCollection("Players");
 
             Path jsonFilePath = Paths.get(
-                "C:\\Users\\Julen\\OneDrive\\Escritorio\\proiektu-pertsonala\\3-Proiektu-pertsonala\\Datu-Atzipena.-2.ebaluazioa-main\\data\\CollegeBasketballPlayers2009-2021.csv");
+                "C:\\Users\\Julen\\OneDrive\\Escritorio\\proiektu-pertsonala\\3-Proiektu-pertsonala\\Datu-Atzipena.-2.ebaluazioa-main\\data\\json\\mongoToJSON.json");
 
             try (FileReader fileReader = new FileReader(jsonFilePath.toFile())) {
                 JsonArray jsonArray = JsonParser.parseReader(fileReader).getAsJsonArray();

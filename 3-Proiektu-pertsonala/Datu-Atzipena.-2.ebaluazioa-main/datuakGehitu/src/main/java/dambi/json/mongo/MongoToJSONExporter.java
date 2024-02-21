@@ -19,7 +19,7 @@ public class MongoToJSONExporter {
             MongoCollection<Document> collection = database.getCollection("Players");
 
             Path jsonFilePath = Paths.get(
-                "C:\\Users\\Julen\\OneDrive\\Escritorio\\proiektu-pertsonala\\3-Proiektu-pertsonala\\Datu-Atzipena.-2.ebaluazioa-main\\data\\mongoToJSON.json");
+                "C:\\Users\\Julen\\OneDrive\\Escritorio\\proiektu-pertsonala\\3-Proiektu-pertsonala\\Datu-Atzipena.-2.ebaluazioa-main\\data\\json\\mongoToJSON.json");
 
             try (FileWriter jsonWriter = new FileWriter(jsonFilePath.toFile())) {
                 FindIterable<Document> documents = collection.find();
