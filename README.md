@@ -7,12 +7,12 @@ Hauek dira kontuan hartu beharreko erabilera orokorreko urratsak:
     - Swagger access: http://localhost:8081/swagger-ui/index.html
     - MongoDB connection String: mongodb://localhost
     - Database name: NBA
-    - Collection name: Players
+    - Collection names: Players and Conferences
     - Maven execution command (same directory as pom.xml): mvn spring-boot:run
 
 # Dataset
 
-Dataset honek hainbat motako atributoak zituen, baina programam baten ondorioz, atributo guztiak aldatzen ditu eta sartzen ditu ArrayList batean String motakoa. Ideia nagusia zen gure datubaseetan nolabaiteko sakontasunaz arduratzea, datu lauak biltzea saihestuz. Proiekturako aukeratutako dataseta Kagglen dagoen datu-multzo batetik aukeratu zen.
+Dataset honek hainbat motako atributoak dira. Ideia nagusia zen gure datubaseetan nolabaiteko sakontasunaz arduratzea, datu lauak biltzea saihestuz. Proiekturako aukeratutako dataseta Kagglen dagoen datu-multzo batetik aukeratu zen.
 
 # Rest Serbitzua
 Atseden-zerbitzuak egitura berezia du. Zerbitzu honen bidez erabiltzaileak eskaera mota desberdinak egin ditzake, mota horiek CRUD aplikazio batek egiten dituen berberak dira; sortu (POST), irakurri (GET), eguneratu (PUT) eta ezabatu (DELETE). Amaiera-puntu bakoitzak eskaera mota bat kudeatzen du, eta horrek esan nahi du, zein kasutan exekutatuko den, zerbitzuak eragiketa mota bat edo beste bat egingo duela. Eskaera egin ahal izateko, erabiltzaile-interfazea edo beste garapen-ingurune bat erabil daiteke, hala nola Imsomnia, Postman eta abar. Swagger-etik azken puntuetara joan, modeloak ikusi eta api doc, yaml formatuan. Hola geldituko litzateke.
@@ -29,13 +29,11 @@ Konexio-kate hori editatzeak eta doitzeak aukera emango dizu behar duzun lekuan 
 Ezkerraldean datu-baseak ikus daitezke, eta hor datu-basea eta datuak gordeko diren bilduma sortzen dira. Datu-basearen izenari NBA esaten zaio, eta bildumari Players. Datu-basea eta bilduma sortu ondoren, gure datuak inportatzen ditugu. Datuak JSON dokumentu bat dira. Mongo dokumentua inportatzeak dokumentu kopuru handia sortuko du. Dokumentu bakoitza jokalari bat da, eta jokalari bakoitzak bere ezaugarriak ditu:
 
      - @param playerName Jokalariaren izena String formatuan
+     - @param lastName Jokalariaren abizena String formatuan
      - @param team Jokalariaren ekipoa String formatuan
      - @param conference Jokalariaren konferentzia String formatuan
      - @param gamesPlayed Jokalariaren jolastutako partidak String formatuan
-     - @param minutesPerGame Jokalariaren jokatutako minutuak String formatuan
-     - @param dunksMade Jokalariaren mateak (ondo eginak) String formatuan
-     - @param stops Jokalariak zenbat aldiz ondo defendatu duen kantitatea String formatuan
-     - @param pts Jokalariaren puntuak String formatuan
+     - Eta hainbat estatistika mixed, double eta int32 formatuetan.
 
 # Javako proiektua
 
