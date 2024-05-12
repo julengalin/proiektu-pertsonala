@@ -18,5 +18,7 @@ public interface PlayerRepository {
     Player findByName(String playerName);
     Player save(Player player);
     long delete(String playerName);
+    List<Player> findTop5Players();
+    List<Player> findAllPlayersByTeamAndConference(String team, String conference);
 
 }
